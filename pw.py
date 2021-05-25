@@ -2,8 +2,8 @@
 
 # An insecure password locker program
 
-passwords = {'rohit8iitb@gmail.com': 'iamthebestever1991',
-             'facebook': 'margaretthatcheris110%sexy'
+passwords = {'xyz@gmail.com': 'password-gmail',
+             'facebook': 'abc'
             }
 
 import sys, pyperclip
