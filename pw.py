@@ -9,7 +9,7 @@ passwords = {'xyz@gmail.com': 'password-gmail',
 import sys, pyperclip
 
 if len(sys.argv) < 2:
-    print('Usage: python pw.py [account] - copy account password')
+    print('Usage: python pw.py [account]. Enter account.')
     sys.exit()
 
 account = sys.argv[1]
