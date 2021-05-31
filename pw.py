@@ -2,11 +2,13 @@
 
 # An insecure password locker program
 
-passwords = {'xyz@gmail.com': 'password-gmail',
-             'facebook': 'abc'
-            }
+import sys, shelve, pyperclip
 
-import sys, pyperclip
+shelf_file = shelve.open('multiclipboard/mcb')
+passwords = shelf_file['passwords']
+shelf_file.close()
+
+print(passwords)
 
 if len(sys.argv) < 2:
     print('Usage: python pw.py [account]. Enter account.')
@@ -16,6 +18,6 @@ account = sys.argv[1]
 
 if account in passwords:
     pyperclip.copy(passwords[account])
-    print(f'Password for the account is copied.')
+    print(f'Password for the {account} account is copied.')
 else:
-    print('Account not found in database. Please make an entry.')
+    print('Account not found in database. Please make an entry in the shelf file.')
