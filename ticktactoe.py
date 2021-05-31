@@ -72,6 +72,8 @@ if __name__ == "__main__":
         if check_win(board, turn):
             print(f'\n {turn} has won!')
             break
+        elif i == N*N-1:
+            print('Tied! Play again!')
         if turn == 'X':
             turn = 'O'
         else:
