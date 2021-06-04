@@ -16,7 +16,6 @@ password = str(sys.argv[1])
 
 upper = re.compile(r'[A-Z]')
 lower = re.compile(r'[a-z]')
-digit = re.compile(r'[0-9]')
 
 if len(password) < 8:
     print('Password must be at least 8 characters long.')
@@ -24,7 +23,7 @@ elif upper.search(password) is None:
     print('Password must contain at least one uppercase character.')
 elif lower.search(password) is None:
     print('Password must contain at least one lowercase character.')
-elif digit.search(password) is None:
+elif password.isalpha():
     print('Password must contain at least one digit.')
 else:
     print('Strong password')
