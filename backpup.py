@@ -17,7 +17,7 @@ def nameZipfile(folder):
     return zipFileName
 
 
-def backupToZip(folder):
+def backupToZip(folder = '.'):
     folder = os.path.abspath(folder)
     zipFileName = nameZipfile(folder)
     print(f'Creating {zipFileName}...')
@@ -35,4 +35,4 @@ def backupToZip(folder):
 
 
 
-backupToZip('./')
+backupToZip()
